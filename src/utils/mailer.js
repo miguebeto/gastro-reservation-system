@@ -3,7 +3,7 @@ import sgMail from "@sendgrid/mail";
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export const sendVerificationEmail = async (user, token) => {
-  const verificationUrl = `http://localhost:3000/api/users/verify-email?token=${token}`;
+  const verificationUrl = `https://gastro-reservation-system-production.up.railway.app/api/users/verify-email?token=${token}`;
   const msg = {
     to: user.email,
     from: "heiner@kru360.com",
